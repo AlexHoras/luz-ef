@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1645493103 source:d:\alex\documents\estudos\curso em c\bubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<locale.h>
+	<time.h>
+
