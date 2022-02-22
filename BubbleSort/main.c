@@ -9,8 +9,10 @@ int main()
 {
     setlocale(LC_ALL, "");
 
-    int numeros[TAM];
-    int i, aux, contador;
+    int *numeros, i, aux, contador;
+
+    // RESERVA MEMORIAS LIMPAS PARA AQ QUANTIDADE DE DADOS ESPECIFICADOS ESTACICAMENTE
+    numeros = calloc(TAM, sizeof(int));
 
     /*
     * INICIA O GERADOR DE NÚMEROS ALEATORIOS COM O VALOR DA FUNÇÃO TIME(NULL)
