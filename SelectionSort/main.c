@@ -9,7 +9,7 @@ int main()
 {
     setlocale(LC_ALL, "");
 
-    int *numeros, i, aux, contador;
+    int *numeros, i, menor, troca, contador;
 
     // RESERVA MEMORIAS LIMPAS PARA QUANTIDADE DE DADOS ESPECIFICADOS ESTATICAMENTE
     numeros = calloc(TAM, sizeof(int));
@@ -33,16 +33,25 @@ int main()
         printf("%4d", numeros[i]);
     }
 
-    // Algoritimos de ordenação BubbleSort
-    for(contador = 1; contador < TAM; contador++){
-        for(i = 0; i < TAM - 1; i++) {
-            if(numeros[i] > numeros[i + 1]){
-                aux = numeros[i];
-                numeros[i] = numeros[i + 1];
-                numeros[i + 1] = aux;
+    // Algoritimos de ordenação SelectionSort
+
+    for(i = 0; i < TAM - 1; i++) {
+
+        menor = i;
+
+        for(contador = i + 1; contador < TAM; contador++){
+            if(numeros[contador] < numeros[menor]){
+                menor = contador;
             }
         }
+
+        if(i != menor){
+           troca = numeros[i];
+           numeros[i] = numeros[menor];
+           numeros[menor] = troca;
+        }
     }
+
 
     printf("\n Elementos do array em ordem crescente: \n");
 

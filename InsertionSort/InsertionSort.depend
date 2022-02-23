@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1645581055 source:d:\alex\documents\estudos\curso em c\insertionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<locale.h>
+	<time.h>
+
